@@ -88,6 +88,7 @@
                         this.password = '';
                         this.repeat = '';
                         this.isReg = false;
+                        alert('恭喜您注册成功！')
                     }else {
                         alert('两次输入的密码不一致！')
                     }
