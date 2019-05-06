@@ -76,12 +76,12 @@
     }
     p{
         width: 100%;
-        word-break: break-all;/*word-break: normal|break-all|keep-all;在恰当的断字点进行换行,break-all允许在单词内换行,keep-all	只能在半角空格或连字符处换行。,normal 使用浏览器默认的换行规则。*/
-        text-overflow: ellipsis;/*溢出文字显示省略号*/
-        display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
-        -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
-        -webkit-line-clamp: 2; /** 显示的行数 **/
-        overflow: hidden;  /** 隐藏超出的内容 **/
+        word-break: break-all;/* word-break: normal|break-all|keep-all;在恰当的断字点进行换行,break-all允许在单词内换行,keep-all	只能在半角空格或连字符处换行。,normal 使用浏览器默认的换行规则。*/
+        text-overflow: ellipsis;/* 溢出文字显示省略号 */
+        display: -webkit-box; /* 对象作为伸缩盒子模型显示 */
+        -webkit-box-orient: vertical; /* 设置或检索伸缩盒对象的子元素的排列方式 */
+        -webkit-line-clamp: 2; /* 显示的行数 */
+        overflow: hidden;  /* 隐藏超出的内容 */
     }
     small{
         color: #777;
