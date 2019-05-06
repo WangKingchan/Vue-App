@@ -36,22 +36,22 @@
     export default {
         name: "Login",
         data () {
-          return{
-              titleLog:'欢 迎 登 录',
-              titleReg:'欢 迎 注 册',
-              imgPath:'/img/logo.82b9c7a5.png',
-              appMsg:[
-                  'Vue-App',
-                  'Vue-Cli/Vue/Vuex/vue-router',
-                  '_Kingchan',
-                  'QQ: 337462466'
-              ],
-              eail:'<a href="mailto:kingchan0858@qq.com">kingchan0858@qq.com</a>',
-              isReg: false,
-              name: '',
-              password: '',
-              repeat: ''
-          }
+            return{
+                titleLog:'欢 迎 登 录',
+                titleReg:'欢 迎 注 册',
+                imgPath:'/img/logo.82b9c7a5.png',
+                appMsg:[
+                    'Vue-App',
+                    'Vue-Cli/Vue/Vuex/vue-router',
+                    '_Kingchan',
+                    'QQ: 337462466'
+                ],
+                eail:'<a href="mailto:kingchan0858@qq.com">kingchan0858@qq.com</a>',
+                isReg: false,
+                name: '',
+                password: '',
+                repeat: ''
+            }
         },
         methods:{
             login () {
