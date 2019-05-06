@@ -64,10 +64,15 @@
         position: relative;
     }
     span{
-        border-bottom: 1px solid rgba(147, 147, 147, 0.4);
-        margin: 5px 0;
+        width: 100%;
         font-weight: 600;
-        display: block;
+        padding-bottom: 3px;
+        word-break: break-all;
+        display: block; /** 对象作为伸缩盒子模型显示 **/
+        overflow: hidden; /*自动隐藏文字*/
+        white-space: nowrap;/*强制不换行*/
+        text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+        border-bottom: 1px solid rgba(147, 147, 147, 0.4);
     }
     p{
         width: 100%;
