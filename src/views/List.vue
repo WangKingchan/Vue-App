@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!--v-show="!hasNews"如果列表没有新闻，则展示提示语和图片否则隐藏改提示语-->
+        <!--v-show="!hasNews"如果列表没有新闻，则展示提示语和图片否则隐藏该提示语-->
         <div class="imgBox" v-html="img" v-show="!hasNews"></div>
         <ul>
             <li v-for="(item,index) in pageLists"
