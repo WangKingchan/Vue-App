@@ -64,6 +64,7 @@
     }
     .deleteNews{
         background: #35495e;
+        color: #42b983;
     }
     .newTitle{
         border-bottom: 1px solid rgba(147, 147, 147, 0.4);
