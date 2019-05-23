@@ -5,9 +5,9 @@
         </div>
         <p>{{greetings}}{{userName}}</p>
         <p>{{welcome}}</p>
-        <div class="btn" type="button" @click="linkAdd()">{{btnAddMsg}}</div>
-        <div class="btn" type="button" @click="btnQuit()">{{btnQuitMsg}}</div>
-        <div class="btn" type="button" @click="btnLogout()">{{btnLogoutMsg}}</div>
+        <button class="btn" type="button" @click="linkAdd()">{{btnAddMsg}}</button>
+        <button class="btn" type="button" @click="btnQuit()">{{btnQuitMsg}}</button>
+        <button class="btn" type="button" @click="btnLogout()">{{btnLogoutMsg}}</button>
     </div>
 </template>
 
@@ -33,10 +33,9 @@
             // 退出登录
             btnQuit () {
                 if (confirm("确认退出当前登录？")) {
-                    alert("退出成功！")
+                    alert("退出成功！");
                     this.$router.push('/')
                 }
-
             },
             // 注销账户
             btnLogout () {
