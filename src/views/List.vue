@@ -19,17 +19,18 @@
 </template>
 
 <script>
+    // 引入vuex核心组件store.js。“@”代表src目录
     import store from '@/store'
     export default {
         name: "List",
-        store,
+        store,// 使用store
         data () {
             return {
                 hasNews: store.state.hasNews,
                 img:'<img alt="Vue logo" src="/img/logo.82b9c7a5.png">' +
                     '<p>哎哟，还没有新闻呢，去个人中心添加吧！</p>',
                 current: '',
-                dateTime: new Date().toLocaleString(),
+                dateTime: new Date().toLocaleString(), // 获取当前时间
                 moreMsg:'查看更多>>',
             }
         },

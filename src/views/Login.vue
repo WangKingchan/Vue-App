@@ -47,40 +47,51 @@
                     'QQ: 337462466'
                 ],
                 eail:'<a href="mailto:kingchan0858@qq.com">kingchan0858@qq.com</a>',
-                isReg: false,
+                isReg: false,// 登录注册的显示状态管理
                 name: '',
                 password: '',
                 repeat: ''
             }
         },
         methods:{
+            // 登录方法
             login () {
                 // 用户点击登录时验证用户输入
                 if (this.name == '' || this.password == '') {
                     alert("请输入用户名和密码！")
                 }else {
-                    if (localStorage.getItem("name") === this.name && localStorage.getItem("password") === this.password) {
+                    // 获取到localStorage中保存的用户名和密码
+                    let locName = localStorage.getItem("name");
+                    let locPass = localStorage.getItem("password");
+                    // 判断输入的用户名和密码跟localStorage中保存的是否一致
+                    if (locName === this.name && locPass === this.password) {
                         //清空登录input输入框的value
                         this.name = '';
                         this.password = '';
-                        this.$router.push('/home/list')
+                        alert("恭喜您已经成功登录！");
+                        // 执行路由跳转到新闻列表
+                        this.$router.push('/home/list');
                     }else {
                         alert("用户名密码不正确！");
                     }
                 }
             },
+            // 点击注册按钮改变isReg为true，显示注册表单
             reg () {
                 this.isReg = true
             },
+            // 点击取消按钮改变isReg为false，显示登录表单
             cancel () {
                 this.isReg = false
             },
+            // 注册方法
             addUser () {
-                //用户点击注册时验证用户输入
+                //点击注册时验证用户输入
                 if (this.name == '' || this.password == '' || this.repeat == '') {
                     alert("请输入用户名和密码")
                 } else {
                     if (this.password === this.repeat) {
+                        //如果用户两次输入的密码一致，就将该用户名和密码保存到localStorage
                         localStorage.setItem("name",this.name);
                         localStorage.setItem("password",this.password);
                         //清空注册input输入框的value
