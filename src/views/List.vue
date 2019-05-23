@@ -30,10 +30,10 @@
         data () {
             return {
                 hasNews: store.state.lists.length,// 当前新闻条数
-                message:'哎哟，一条新闻都没有，快去个人中心添加吧！',
+                message:'哎哟，一条新闻都没有，快去个人中心添加吧~~',
                 current: '',
                 dateTime: new Date().toLocaleString(), // 获取当前时间
-                moreMsg:'查看更多>>',
+                moreMsg:'查看更多 >>>',
             }
         },
         computed: {

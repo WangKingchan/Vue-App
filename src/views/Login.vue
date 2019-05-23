@@ -135,7 +135,7 @@
     }
     .btn{
         display: inline-block;
-        width: 40%;
+        width: 38%;
         height: 40px;
         line-height: 40px;
         font-size: 16px;

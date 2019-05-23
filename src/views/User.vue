@@ -20,7 +20,7 @@
                 btnLogoutMsg:'注 销 账 户',
                 btnQuitMsg:'退 出 登 录',
                 greetings:'Hello ',
-                welcome:'Welcome to the personal center',
+                welcome:'Welcome to the personal center～',
                 userName:localStorage.getItem("name")
             }
         },
