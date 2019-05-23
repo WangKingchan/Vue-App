@@ -55,10 +55,12 @@
         display: block;
         width: 80%;
         height: 40px;
+        outline: none;
         line-height: 40px;
         background: #42b983;
         color: #35495e;
         font-size: 16px;
+        border: none;
         border-radius: 5px;
         margin: 15px auto;
     }
