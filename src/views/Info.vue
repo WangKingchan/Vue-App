@@ -37,11 +37,13 @@
             },
             // 删除当前这条新闻并返回列表
             deleteNews(){
-                // 调用数组方法splice()删除当前这个元素
-                // 语法：arrayObject.splice(index,howmany)
-                store.state.lists.splice(store.state.current,1);
-                // 路由跳转实现返回列表
-                this.$router.push('/home/list');
+                if (confirm("新闻数据删除后将不可恢复，确认删除吗？")) {
+                    // 调用数组方法splice()删除当前这个元素
+                    // 语法：arrayObject.splice(index,howmany)
+                    store.state.lists.splice(store.state.current,1);
+                    // 删除后返回列表
+                    this.$router.push('/home/list');
+                }
             }
         }
     }

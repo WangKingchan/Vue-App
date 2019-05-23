@@ -1,7 +1,10 @@
 <template>
     <div>
         <!--v-show="!hasNews"如果列表没有新闻，则展示提示语和图片否则隐藏该提示语-->
-        <div class="imgBox" v-html="img" v-show="!hasNews"></div>
+        <div class="imgBox" v-show="!hasNews">
+            <img src="../assets/logo.png" alt="vue主题图标">
+            <p v-text="message"></p>
+        </div>
         <ul>
             <li v-for="(item,index) in pageLists"
                 @click="look(index)"
@@ -26,9 +29,8 @@
         store,// 使用store
         data () {
             return {
-                hasNews: store.state.hasNews,
-                img:'<img alt="Vue logo" src="/img/logo.82b9c7a5.png">' +
-                    '<p>哎哟，还没有新闻呢，去个人中心添加吧！</p>',
+                hasNews: store.state.lists.length,// 当前新闻条数
+                message:'哎哟，一条新闻都没有，快去个人中心添加吧！',
                 current: '',
                 dateTime: new Date().toLocaleString(), // 获取当前时间
                 moreMsg:'查看更多>>',
@@ -40,6 +42,7 @@
             }
         },
         methods:{
+            // 点击列表
             look (index) {
                 this.current = index
             },

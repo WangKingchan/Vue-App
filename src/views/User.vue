@@ -16,7 +16,6 @@
         name: "User",
         data () {
             return {
-                // img:'../assets/logo.png',
                 btnAddMsg:'添 加 新 闻',
                 btnLogoutMsg:'注 销 账 户',
                 btnQuitMsg:'退 出 登 录',
